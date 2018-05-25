@@ -38,16 +38,15 @@
 		{
 		alert("De tekst invoer is te lang");
 		}
-				
-		if (document.getElementById('cbhtml').checked && document.getElementById('cbcss').checked )
-		{
-		document.getElementById('typedeveloper').innerHTML = 'Ik ben een front-end developer.'; 
-		}
-				
+							
 		if (document.getElementById('cbphp').checked)
 		{
 		document.getElementById('typedeveloper').innerHTML = 'Ik ben een back-end developer.'; 
-								
+		}
+		
+		else if (document.getElementById('cbhtml').checked && document.getElementById('cbcss').checked)
+		{
+		document.getElementById('typedeveloper').innerHTML = 'Ik ben een front-end developer.'; 
 		}
 				
 		else {
@@ -59,31 +58,33 @@
 </script>
 
 <div class="form">
-	<table  onsubmit="updateProfiel(); return false;">
-		<tr>
-			<th><h1>Profielschets</h1></th>
-			<td>Jouw naam: 				<input id="nieuwenaam"  type=text></td>
-			<td>Jouw competentie-1: 	<input id="nieuwecompetentie1"  type=text></td>
-			<td>Jouw competentie-2: 	<input id="nieuwecompetentie2"  type=text></td>
-			<td>Jouw functie: 			<input id="nieuwefunctie"  type=text></td>
-			<td>Jouw beroepsrichting-1: <input id="nieuweberoepsrichting1"  type=text></td>
-			<td>Jouw beroepsrichting-2: <input id="nieuweberoepsrichting2"  type=text></td>
-			<td>Jouw competentie-3: 	<input id="nieuwecompetentie3"  type=text></td>
-			<td>Jouw competentie-4: 	<input id="nieuwecompetentie4"  type=text></td>
-			<td>Jouw competentie-5: 	<input id="nieuwecompetentie5"  type=text></td>
-			<td>Jouw baanvoorkeur-1: 	<input id="nieuwebaanvoorkeur1"  type=text></td>
-			<td>Jouw baanvoorkeur-2: 	<input id="nieuwebaanvoorkeur2"  type=text></td>
-			<td>Jouw groei-richting-1: 	<input id="nieuwegroei-richting1"  type=text></td>
-			<td>Jouw groei-richting-2: 	<input id="nieuwegroei-richting2"  type=text></td>
-			<td>vrije invoer: 			<textarea id="vrijeinvoer" cols=30 rows=4></textarea></td>
-			<th><h2>Vaardigheden</h2></th>
-			<td><input id="cbhtml" type="checkbox" class="checkbox">HTML</td>
-			<td><input id="cbcss" type="checkbox" class="checkbox">CSS</td>
-			<td><input id="cbjavascript" type="checkbox" class="checkbox">JavaScript</td>
-			<td><input id="cbphp" type="checkbox" class="checkbox">PHP</td>
-			<td><input type=submit class="send"></td>
-		</tr>
-	</table>
+	<form  onsubmit="updateProfiel(); return false;">
+		<table>
+			<tr>
+				<th><h1>Profielschets</h1></th>
+				<td>Jouw naam: 				<input id="nieuwenaam"  type=text></td>
+				<td>Jouw competentie-1: 	<input id="nieuwecompetentie1"  type=text></td>
+				<td>Jouw competentie-2: 	<input id="nieuwecompetentie2"  type=text></td>
+				<td>Jouw functie: 			<input id="nieuwefunctie"  type=text></td>
+				<td>Jouw beroepsrichting-1: <input id="nieuweberoepsrichting1"  type=text></td>
+				<td>Jouw beroepsrichting-2: <input id="nieuweberoepsrichting2"  type=text></td>
+				<td>Jouw competentie-3: 	<input id="nieuwecompetentie3"  type=text></td>
+				<td>Jouw competentie-4: 	<input id="nieuwecompetentie4"  type=text></td>
+				<td>Jouw competentie-5: 	<input id="nieuwecompetentie5"  type=text></td>
+				<td>Jouw baanvoorkeur-1: 	<input id="nieuwebaanvoorkeur1"  type=text></td>
+				<td>Jouw baanvoorkeur-2: 	<input id="nieuwebaanvoorkeur2"  type=text></td>
+				<td>Jouw groei-richting-1: 	<input id="nieuwegroei-richting1"  type=text></td>
+				<td>Jouw groei-richting-2: 	<input id="nieuwegroei-richting2"  type=text></td>
+				<td>vrije invoer: 			<textarea id="vrijeinvoer" cols=30 rows=4></textarea></td>
+				<h2>Vaardigheden</h2>
+				<td><input id="cbhtml" type="checkbox" class="checkbox">HTML</td>
+				<td><input id="cbcss" type="checkbox" class="checkbox">CSS</td>
+				<td><input id="cbjavascript" type="checkbox" class="checkbox">JavaScript</td>
+				<td><input id="cbphp" type="checkbox" class="checkbox">PHP</td>
+				<td><input type=submit class="send"></td>
+			</tr>
+		</table>
+	</form>
 </div>
 
 <h4>Mijn naam is <B id="naamkandidaat">NAAM</B> en ik ben een <b id="naamcompetentie1">COMPETENTIE-1</b> 
