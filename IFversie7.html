@@ -1,0 +1,86 @@
+<!DOCTYPE.hmtl>
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="C:\Users\jasper\Documents\Opdrachten\Hackethon opdracht/style.css"/>
+<link href="https://fonts.googleapis.com/css?family=Orbitron|Pathway+Gothic+One" rel="stylesheet">
+</head>
+<body>
+
+<script>
+	function updateProfiel()
+	
+		{
+		 document.getElementById('naamkandidaat').innerHTML = document.getElementById('nieuwenaam').value; 
+		 document.getElementById('naamfunctie').innerHTML   = document.getElementById('nieuwefunctie').value;
+		 document.getElementById('vrijetekst').innerHTML    = document.getElementById('vrijeinvoer').value;
+		
+		//  Let op: value.length gebruiken, want innerHTML.length werkt niet met Chrome wel met Edge (die is minder streng).
+		
+			if (document.getElementById('vrijeinvoer').value.length < 50)
+			{
+				alert("De tekst invoer is te kort");
+			}		
+			
+			if (document.getElementById('vrijeinvoer').value.length > 2000)
+			{
+				alert("De tekst invoer is te lang");
+			}
+			
+			if (document.getElementById('cbhtml').checked && document.getElementById('cbcss').checked )
+			{
+				document.getElementById('typedeveloper').innerHTML = 'Ik ben een front-end developer.'; 
+							
+			}
+			
+			else {
+				document.getElementById('typedeveloper').innerHTML = '';
+			}
+						
+	}
+	
+</script>
+
+	<center><form class="form" onsubmit="updateProfiel(); return false;">
+		<h1>Profielschets</h1>
+		Jouw naam: <input id="nieuwenaam"  type=text>
+		<br>
+		<br>
+		<br>
+		Jouw functie: <input id="nieuwefunctie"  type=text>
+		<br>
+		<br>
+		<br>
+		vrije invoer: <textarea id="vrijeinvoer" cols=30 rows=4></textarea>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h2>Vaardigheden</h2>
+		<br>
+			<input id="cbhtml" type="checkbox" class="checkbox">HTML
+			<br>
+			<br>
+			<input id="cbcss" type="checkbox" class="checkbox">CSS
+			<br>
+			<br>
+			<input id="cbjavascript" type="checkbox" class="checkbox">JavaScript
+			<br>
+			<br>
+			<input id="cbphp" type="checkbox" class="checkbox">PHP
+			<br>					
+			<br>					
+		<input type=submit class="send">
+			<br>
+		
+	</form></center>
+
+<p>Mijn naam is <B id="naamkandidaat">BIANCA</B> en ik ben een <b id="naamfunctie">JUNIOR WEBDEVELOPER.</b>
+<br>
+<i id="vrijetekst">nog geen tekst invoer</i>
+<br>
+<B id="typedeveloper"></B>
+</p>
+</body>
+</html>

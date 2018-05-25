@@ -1,0 +1,71 @@
+html {
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-size: 40px;
+	color: black;
+}
+body {
+	background: linear-gradient(#5e7f7a, #9fd8cf); 
+	
+}
+h1 { 
+	text-align: center;
+	color:  #ff6600;
+}
+h2 {
+	font-size: 50px;
+	text-align: center;
+	color:  #ff6600;
+}
+
+p {
+	text-align: center;
+	
+}
+
+.form {
+	color: #ffcc66;
+	margin: 20px;
+	padding: 0px 30px;
+	width: 800px;
+	height: 1400px;
+	margin: 0 auto;
+	border: 3px solid #ff6600;
+	border-radius: 6px;
+	background: #2c3e46;
+	box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
+		 
+}
+
+input, textarea {
+	padding: 20px;
+	margin: 20px;
+	border-radius: 6px;
+	display: inline-block; 
+	float: right;
+	width: 400px;
+	border: 3px solid #ff6600;
+	font-size: 20px;
+	
+}
+
+.send {
+	background: brown;
+	border: 5px solid #ff6600;
+	color: #ffcc66;
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-size: 40px;
+	cursor: pointer;
+	box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
+	
+}
+
+.checkbox {
+	display: inline-block; 
+	float: left;
+	cursor: pointer;
+	font-size: 40px;
+	transform: scale(3);
+	
+	
+
+}	
